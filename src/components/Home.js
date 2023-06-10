@@ -1,6 +1,6 @@
 import React from 'react'
 import eco from "./images/eco.png"
-
+import yes from "./images/yes.png"
 import './Style.css'
 import Navbar from './Navbar'
 import ACarousel from './Carousel'
@@ -13,37 +13,43 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
+import vid1 from './images/vid1.mp4';
+import img1 from './images/img1.jpg'
+import WebFont from 'webfontloader';
+import { useEffect } from 'react'
+import Pagination from '@mui/material/Pagination';
 const Home = () => {
     const myStyle={
-      backgroundImage: 
- "url('https://images.wallpaperscraft.com/image/single/leaves_dark_plant_128531_1920x1080.jpg')",
 
-        height:'100vh',
-        
-        fontSize:'50px',
+       
+        backgroundImage: 
+        "url('https://wallpaperaccess.com/full/1132838.jpg')",
+       height: '100vh',
+       weight: '100%',
         backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
         
     };
+    
+    
+   
   
   return (
-    <div style={myStyle}>
-    <div className='card' style={{height : "716px",width : "540px"}}>
-    
-      <Paper>
-        {/* <Typography className='h2'>
-          EcoAware
-          </Typography> */}
+    <>
+    <div className='container'>
+      <section className='one'>
+        <div style={myStyle}> 
+        <div className='card'></div>
+        
+       </div>
        
-      </Paper>
-      <div className='img'> <img src={eco} className='img'/></div>
+      
+    </section>
+    <section className='two'><h1>hello</h1>
+   </section>
+   
     
     </div>
-   
-    <div>
-    <Button color="inherit"><Link to={"/camera"} className='nog' style={{textDecoration: 'none'}}>Camera</Link></Button>
-    </div>
-    </div>
+    </>
   )
 }
 

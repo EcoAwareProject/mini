@@ -1,19 +1,58 @@
 .card{
   /* From https://css.glass */
 /* From https://css.glass */
-background: rgba(255, 255, 255, 0.24);
+
 border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(7.3px);
--webkit-backdrop-filter: blur(7.3px);
+box-shadow: 0 10px 30px rgba(7, 142, 36, 0.756);
+
 margin-left: 400px;
 margin-top: 200px;
-position: absolute
+height: 630px;
+width: 410px;
+
 }
+
+
+.div1{
+  margin-top: 300px;
+  position: absolute;
+  margin-left: 1000px;
  
-.img{
-  height: 375px;
-  width: 450px;
-  margin-left: 20px;
   
+}
+.div2{
+  margin-top: 450px;
+  position: absolute;
+  margin-left: 1500px;
+}
+.div3{
+  margin-top: 600px;
+  position: absolute;
+  margin-left: 1000px;
+}
+.div4{
+  margin-top: 750px;
+  position: absolute;
+  margin-left: 1500px;
+}
+.btn{
+  height: 80px;
+  width: 350px;
+  
+}
+p{
+  font-size: 40px;
+  color: #fff;
+  font-family: "Exo2-Regular";
+}
+
+
+section{
+  height: 100vh;
+  scroll-snap-align: start;
+}
+.container{
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
 }
