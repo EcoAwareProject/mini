@@ -4,6 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './components/fonts/Exo2-Regular.ttf';
+import './components/fonts/tsukimi/TsukimiRounded-SemiBold.ttf'
+import './components/fonts/greatvibes/GreatVibes-Regular.ttf'
+import './components/fonts/marck/MarckScript-Regular.ttf'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

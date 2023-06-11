@@ -1,14 +1,11 @@
-.card{
-  /* From https://css.glass */
-/* From https://css.glass */
-
+/* .card{
+ 
 border-radius: 16px;
-box-shadow: 0 10px 30px rgba(7, 142, 36, 0.756);
-
-margin-left: 400px;
+box-shadow: 0 10px 30px rgba(152, 203, 24, 0.652);
+margin-left: 70vh;
 margin-top: 200px;
-height: 630px;
-width: 410px;
+height: 700px;
+width: 470px;
 
 }
 
@@ -41,9 +38,14 @@ width: 410px;
   
 }
 p{
-  font-size: 40px;
+  font-size: 30px;
   color: #fff;
-  font-family: "Exo2-Regular";
+  font-family: "TsukimiRounded-SemiBold";
+}
+.title{
+  font-size: 70px;
+  color: #fff;
+  font-family: "MarckScript-Regular";
 }
 
 
@@ -55,4 +57,152 @@ section{
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh;
+ 
+    
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+ 
+}
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+} */
+
+
+.container{
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://wallpaperaccess.com/full/1132838.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+h2{
+  color: white;
+
+}
+p{
+  color: white;
+}
+header {
+  background-color: transparent;
+  color: white;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-family: 'Arial', sans-serif;
+  font-size: 36px;
+  margin: 0;
+}
+
+main {
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+section:first-child {
+  height: 100vh; /* Override height for the first section to full viewport height */
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.transparent-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  scroll-snap-stop: always;
+}
+
+.content {
+  
+  width: 700px;
+  height: 500px;
+  padding: 20px;
+  text-align: center;
+}
+
+.pagination {
+  position: fixed;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.pagination-dot {
+ width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.pagination-dot span {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  header {
+    font-size: 24px;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  section {
+    margin-bottom: 10px;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+
+  .content {
+    width: 100%;
+    height: auto;
+    max-width: 90vw;
+    max-height: 70vh;
+  }
+
+  .pagination {
+    right: 10px;
+  }
 }

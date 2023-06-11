@@ -18,4 +18,18 @@ code {
    url("./components/fonts/Exo2-Regular.ttf") format("truetype");
   
  }
- 
+@font-face {
+  font-family: "TsukimiRounded-SemiBold";
+  src: local("TsukimiRounded-SemiBold"),
+     url("./components/fonts/tsukimi/TsukimiRounded-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GreatVibes-Regular";
+  src: local("GreatVibes-Regular"),
+     url("./components/fonts/greatvibes/GreatVibes-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "MarckScript-Regular";
+  src: local("MarckScript-Regular"),
+     url("./components/fonts/marck/MarckScript-Regular.ttf") format("truetype");
+}
