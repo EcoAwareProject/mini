@@ -5,6 +5,7 @@ import Database from './components/Database';
 import Camera from './components/Camera';
 import Contact from './components/Contact';
 import Contributors from './components/Contributors';
+import Upload from './components/Upload';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Route path='/camera'element={<Camera/>}></Route>
       <Route path='/contributors'element={<Contributors/>}></Route>
       <Route path='/contact'element={<Contact/>}></Route>
+      <Route path='/upload'element={<Upload/>}></Route>
 
       
     </Routes>

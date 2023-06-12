@@ -124,6 +124,7 @@ function Home() {
       behavior: 'smooth',
       block: 'start',
       inline: 'nearest',
+      
     });
   };
 
@@ -156,6 +157,7 @@ function Home() {
           <h2>Services</h2>
           <p>Discover our eco-friendly services for a sustainable lifestyle.</p>
           <Link to="/camera">Camera</Link>
+          <Link to="/upload">Upload</Link>
           </div>
         </section>
         <section ref={(el) => (sectionRefs.current[3] = el)} className="transparent-box">
