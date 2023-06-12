@@ -111,6 +111,7 @@
 
 
 import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import './Style.css';
 import Navbar from './Navbar'
 function Home() {
@@ -154,6 +155,7 @@ function Home() {
         <div className="content">
           <h2>Services</h2>
           <p>Discover our eco-friendly services for a sustainable lifestyle.</p>
+          <Link to="/camera">Camera</Link>
           </div>
         </section>
         <section ref={(el) => (sectionRefs.current[3] = el)} className="transparent-box">
