@@ -164,12 +164,12 @@ function Home() {
         </section>
       </main>
       <footer>
-        <div className="pagination">
+        {/* <div className="pagination">
           <div className="pagination-dot" onClick={() => scrollToSection(0)} />
           <div className="pagination-dot" onClick={() => scrollToSection(1)} />
           <div className="pagination-dot" onClick={() => scrollToSection(2)} />
           <div className="pagination-dot" onClick={() => scrollToSection(3)} />
-        </div>
+        </div> */}
         <p>&copy; {new Date().getFullYear()} Background Website. All rights reserved.</p>
       </footer>
     </div>
