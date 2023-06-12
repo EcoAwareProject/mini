@@ -1,74 +1,3 @@
-/* .card{
- 
-border-radius: 16px;
-box-shadow: 0 10px 30px rgba(152, 203, 24, 0.652);
-margin-left: 70vh;
-margin-top: 200px;
-height: 700px;
-width: 470px;
-
-}
-
-
-.div1{
-  margin-top: 300px;
-  position: absolute;
-  margin-left: 1000px;
- 
-  
-}
-.div2{
-  margin-top: 450px;
-  position: absolute;
-  margin-left: 1500px;
-}
-.div3{
-  margin-top: 600px;
-  position: absolute;
-  margin-left: 1000px;
-}
-.div4{
-  margin-top: 750px;
-  position: absolute;
-  margin-left: 1500px;
-}
-.btn{
-  height: 80px;
-  width: 350px;
-  
-}
-p{
-  font-size: 30px;
-  color: #fff;
-  font-family: "TsukimiRounded-SemiBold";
-}
-.title{
-  font-size: 70px;
-  color: #fff;
-  font-family: "MarckScript-Regular";
-}
-
-
-section{
-  height: 100vh;
-  scroll-snap-align: start;
-}
-.container{
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
- 
-    
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 20px;
- 
-}
-@media (max-width: 768px) {
-  .gallery {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  }
-} */
-
 
 .container{
   scroll-snap-type: y mandatory;
@@ -214,4 +143,156 @@ footer {
   .pagination {
     right: 10px;
   }
+}
+
+.camera-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('https://wallpaperaccess.com/full/1132838.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 500px;
+  height: 0;
+  padding-bottom: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.button {
+  background-color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: all 0.3s;
+  border: none;
+  border-radius: 4px;
+}
+
+.button.hovered {
+  background-color: #3C6255;
+  color: #fff;
+  transform: scale(1.1);
+  border-radius: 8px;
+}
+/* arrows */
+.arrow-down {
+  position: relative;
+  margin-top: 100px;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.arrow-down::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #3C6255;
+  transition: border-color 0.3s ease;
+}
+
+.snap-scroll-section:last-child .arrow-down::after {
+  border-top-color: transparent;
+}
+
+.arrow-down:hover {
+  background-color: #3C6255;
+}
+
+.arrow-down:hover::after {
+  border-top-color: #fff;
+}
+.arrow-up {
+  position: relative;
+  margin-top: 100px;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.arrow-up::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #3C6255;
+  transition: border-color 0.3s ease;
+}
+
+.snap-scroll-section:first-child .arrow-up::after {
+  border-bottom-color: transparent;
+}
+
+.arrow-up:hover {
+  background-color: #3C6255;
+}
+
+.arrow-up:hover::after {
+  border-bottom-color: #fff;
+}
+/* upload-page */
+.upload-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-image: url('https://wallpaperaccess.com/full/1132838.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.upload-page input[type="file"] {
+  margin-bottom: 10px;
+}
+
+.upload-page button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.upload-page button:hover {
+  background-color: #555;
 }

@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
+import './Style.css';
 
-const CameraPage = () => {
+const Camera = () => {
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -34,10 +35,10 @@ const CameraPage = () => {
     <div className="camera-page">
       <h2>Camera Page</h2>
       <div className="video-container">
-        <video ref={videoRef} autoPlay playsInline />
+        <video ref={videoRef} autoPlay playsInline className="video" />
       </div>
     </div>
   );
 };
 
-export default CameraPage;
+export default Camera;
