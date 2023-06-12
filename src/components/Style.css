@@ -89,11 +89,19 @@ section{
 }
 
 h2{
+  font-size: 30px;
   color: white;
+  font-family: "TsukimiRounded-SemiBold";
 
 }
-p{
+h1{
   color: white;
+  
+}
+p{
+  font-size: 20px;
+  color: white;
+  font-family: "TsukimiRounded-SemiBold";
 }
 header {
   background-color: transparent;
@@ -109,8 +117,8 @@ header {
 }
 
 .title {
-  font-family: 'Arial', sans-serif;
-  font-size: 36px;
+  font-family: "TsukimiRounded-SemiBold";
+  font-size: 60px;
   margin: 0;
 }
 
@@ -147,9 +155,9 @@ footer {
 
 .content {
   
-  width: 700px;
+  
   height: 500px;
-  padding: 20px;
+  
   text-align: center;
 }
 

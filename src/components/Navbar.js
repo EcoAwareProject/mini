@@ -10,7 +10,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 const Navbar = () => {
     const style={
-        backgroundColor: '#000'
+        backgroundColor: 'black'
     }
    
   return (

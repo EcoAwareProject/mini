@@ -112,7 +112,7 @@
 
 import React, { useRef } from 'react';
 import './Style.css';
-
+import Navbar from './Navbar'
 function Home() {
  const mainRef = useRef(null);
   const sectionRefs = useRef([]);
@@ -135,21 +135,32 @@ function Home() {
       <main ref={mainRef}>
         <section ref={(el) => (sectionRefs.current[0] = el)} className="transparent-box">
           <div className="content">
-            <h2>About</h2>
-            <p>Welcome to our background website! This is an example website with a background image.</p>
+            <h2>About Us</h2>
+            <p>Welcome to EcoAware, your go-to resource for detecting invasive plant species in Kerala.<br></br>
+              We provide accurate identification and comprehensive information to protect our ecosystems.<br></br>
+              Join us in safeguarding nature's balance today.</p>
           </div>
         </section>
-        <section ref={(el) => (sectionRefs.current[1] = el)} className="snap-scroll-section">
-          <h2>Gallery</h2>
-          <p>Check out our amazing collection of eco-friendly images.</p>
+        <section ref={(el) => (sectionRefs.current[1] = el)} className="transparent-box">
+        <div className="content">
+          <h2>What are Invasive Species ?</h2>
+          <p>Invasive plant species are non-native plants that outcompete native species, disrupt ecosystems, and harm biodiversity.<br></br> 
+          They spread rapidly, often causing economic and environmental damage.<br></br>
+          Detecting and managing them is crucial for preserving ecosystems.</p>
+          <a href='https://en.wikipedia.org/wiki/Invasive_species' style={{textDecoration:'none',color:'white',fontSize:"15px",fontFamily:"TsukimiRounded-SemiBold"}}>Read More.</a>
+          </div>
         </section>
-        <section ref={(el) => (sectionRefs.current[2] = el)} className="snap-scroll-section">
+        <section ref={(el) => (sectionRefs.current[2] = el)} className="transparent-box">
+        <div className="content">
           <h2>Services</h2>
           <p>Discover our eco-friendly services for a sustainable lifestyle.</p>
+          </div>
         </section>
-        <section ref={(el) => (sectionRefs.current[3] = el)} className="snap-scroll-section">
+        <section ref={(el) => (sectionRefs.current[3] = el)} className="transparent-box">
+        <div className="content">
           <h2>Contact</h2>
           <p>Get in touch with us to learn more about our initiatives.</p>
+          </div>
         </section>
       </main>
       <footer>
