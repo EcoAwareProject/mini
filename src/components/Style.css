@@ -296,3 +296,19 @@ footer {
 .upload-page button:hover {
   background-color: #555;
 }
+
+.card{
+  margin-top: 20px;
+  margin-left: 20px;
+  background: rgb(228,122,160);
+background: linear-gradient(90deg, rgba(228,122,160,1) 100%, rgba(0,0,0,1) 100%, rgba(241,10,57,1) 100%, rgba(222,18,111,1) 100%);
+}
+.db{
+  position: absolute;
+  
+  height: 100vh;
+  background-image: url('https://wallpaperaccess.com/full/1132838.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
