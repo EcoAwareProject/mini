@@ -1,33 +1,52 @@
-import React, { useState,useEffect } from 'react';
-import axios from 'axios'
+import React, { useState } from 'react';
+import axios from 'axios';
 
 const Upload = () => {
   const [selectedFile, setSelectedFile] = useState(null);
+  const [prediction, setPrediction] = useState(null);
+  
 
   const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]);
   };
-  var [result,setresult] = useState({})
+
   const handleUpload = () => {
     let formData = new FormData();
-   formData.append("file", selectedFile);
-  console.log(selectedFile)
-   axios.post('https://ecoaware-ml.onrender.com/api/predict', formData, {
-    headers: {
-      "Content-Type": "multipart/form-data",
-    }
-  }).then(function (response) {
-    console.log(response.data);
-  });
+    formData.append("file", selectedFile);
 
-// const { data } =  axios.post('https://ecoaware-ml.onrender.com/api/predict');
+    axios.post('https://ecoaware-ml.onrender.com/api/predict', formData, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      }
+    })
+      .then(response => {
+        console.log(response.data);
+        setPrediction(response.data.Prediction);
+        
+      })
+      .catch(error => {
+        console.log(error);
+      });
   };
+
+  console.log("Prediction:", prediction);
+  
 
   return (
     <div className="upload-page">
       <h2>Upload Image</h2>
       <input type="file" onChange={handleFileChange} />
       <button onClick={handleUpload}>Upload</button>
+      <h1>
+        {prediction ? (
+          <>
+            <div>Plant Name: {prediction}</div>
+            
+          </>
+        ) : (
+          <div>No data available</div>
+        )}
+      </h1>
     </div>
   );
 };
