@@ -66,7 +66,7 @@ function Home() {
       className={`button ${isHovered ? 'hovered' : ''}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      style={{marginRight:'50px'}}
+      style={{marginRight:'50px',marginLeft:'20px',marginTop:'10px'}}
     ><Link to="/camera" style={{textDecoration:'none',color:'black',fontSize:"15px",fontFamily:"TsukimiRounded-SemiBold"}}>Camera</Link></button> 
     
     
@@ -74,8 +74,19 @@ function Home() {
       className={`button ${isHovered ? 'hovered' : ''}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      style={{marginRight:'50px',marginTop:'10px'}}
     >
       <Link to="/upload" style={{textDecoration:'none',color:'black',fontSize:"15px",fontFamily:"TsukimiRounded-SemiBold"}}>Upload</Link>
+    </button>
+
+    
+    <button
+      className={`button ${isHovered ? 'hovered' : ''}`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      style={{marginRight:'20px',marginTop:'10px'}}
+    >
+      <Link to="/db" style={{textDecoration:'none',color:'black',fontSize:"15px",fontFamily:"TsukimiRounded-SemiBold"}}>Database</Link>
     </button>
     <div className="arrow-down" onClick={() => scrollToSection(3)} />
           
@@ -85,6 +96,13 @@ function Home() {
         <div className="content">
           <h2>Contact</h2>
           <p>Get in touch with us to learn more about our initiatives.</p>
+          <p>Contributors :</p>
+             <p>Suhail Khan</p>
+             <p>Sidharth D</p>
+             <p>Vaishnav B L</p>
+             <p>Anandhu Nair J</p>
+          
+
           <div className="arrow-up" onClick={() => scrollToSection(0)} />
           </div>
         </section>

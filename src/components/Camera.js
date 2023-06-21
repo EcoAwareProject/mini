@@ -21,7 +21,7 @@ const Camera = () => {
 
     startCamera();
 
-    // Cleanup function to stop the camera when the component unmounts or when the user leaves the page
+    
     return () => {
       if (videoRef.current && videoRef.current.srcObject) {
         const videoTracks = videoRef.current.srcObject.getVideoTracks();
@@ -48,15 +48,21 @@ const Camera = () => {
     context.drawImage(video, 0, 0, canvas.width, canvas.height);
 
     // Get the image data from the canvas as a base64-encoded string
-    const imageData = canvas.toDataURL('image/jpeg');
+    canvas.toBlob((blob) => {
+      // Create a File object from the Blob
+      const file = new File([blob], 'captured_image.jpg', { type: 'image/jpeg' });
+      
+      // Pass the captured image file to the function for further processing or upload
+      sendImageToAPI(file);
+    }, 'image/jpeg');
     
     // Send the captured image to your API or further process it as needed
-    sendImageToAPI(imageData);
+    
   };
 
-  const sendImageToAPI = (imageData) => {
+  const sendImageToAPI = (file) => {
     let formData = new FormData();
-    formData.append("file", imageData);
+    formData.append("file", file);
 
     axios.post('https://ecoaware-ml.onrender.com/api/predict', formData, {
       headers: {
@@ -72,6 +78,15 @@ const Camera = () => {
         console.log(error);
       });
   };
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
 
   return (
     <div className="camera-page">
@@ -79,8 +94,20 @@ const Camera = () => {
       <div className="video-container">
         <video ref={videoRef} autoPlay playsInline className="video" />
       </div>
-      <button onClick={handleCapture}>Capture</button>
+      <button onClick={handleCapture} className={`button ${isHovered ? 'hovered' : ''}`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}>Capture</button>
       <canvas ref={canvasRef} style={{ display: 'none' }}></canvas>
+      <h1>
+        {prediction ? (
+          <>
+            <div>Plant Name: {prediction}</div>
+            
+          </>
+        ) : (
+          <div>No data available</div>
+        )}
+      </h1>
     </div>
   );
 };

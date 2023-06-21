@@ -30,13 +30,24 @@ const Upload = () => {
   };
 
   console.log("Prediction:", prediction);
-  
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
 
   return (
     <div className="upload-page">
       <h2>Upload Image</h2>
-      <input type="file" onChange={handleFileChange} />
-      <button onClick={handleUpload}>Upload</button>
+      <input type="file" onChange={handleFileChange} style={{color:'white'}} />
+      <button onClick={handleUpload} className={`button ${isHovered ? 'hovered' : ''}`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}>Upload</button>
       <h1>
         {prediction ? (
           <>
